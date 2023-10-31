@@ -32,25 +32,3 @@ export var postTask = function (content, successCB, errorCB) {
 
   $.ajax(request);
 };
-
-export var markTaskActive = function (taskId, userId, successCB, errorCB) {
-  var request = {
-    type: 'PUT',
-    url: `/api/tasks/${taskId}/mark_active?api_key=${userId}`,
-    success: successCB,
-    error: errorCB
-  }
-
-  $.ajax(request);
-};
-
-export var removeTask = function (taskId, userId, successCB, errorCB) {
-  var request = {
-    type: 'DELETE',
-    url: `/api/tasks/${taskId}?api_key=${userId}`,
-    success: successCB,
-    error: errorCB
-  }
-
-  $.ajax(request);
-};
