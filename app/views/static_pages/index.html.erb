@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="<%= asset_path('styles.css') %>">
+<%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center mt-4">To Do List</h1>
+      <div class="row" id="tasks"></div> <!-- Container for tasks -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <input type="text" id="new-task" class="form-control" placeholder="New Task">
+      <button class="btn btn-primary" id="add-task">Add Task</button>
+    </div>
+  </div>
+</div>

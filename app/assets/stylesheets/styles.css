@@ -1,0 +1,21 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task .mark-active,
+.task .remove-task {
+  margin-left: auto;
+}
+
+/* Blue color for "Mark Active" button when it's inactive */
+.mark-active-inactive {
+  background-color: #007bff; /* Blue color */
+  color: #fff; /* Text color for contrast */
+}
+
+/* Green color for "Mark Active" button when it's active */
+.mark-active-active {
+  background-color: #28a745; /* Green color */
+  color: #fff; /* Text color for contrast */
+}
