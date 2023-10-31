@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>FswdTodolist</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body class="<%= controller_name %> <%= action_name %>">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="text-center mt-4">To Do List</h1>
-          <div class="form-group">
-            <input type="text" id="taskDescription" class="form-control" placeholder="Enter a new task...">
-            <button id="addTask" class="btn btn-primary mt-3">Add Task</button>
-          </div>
-          <div class="mt-4">
-            <div class="btn-group">
-              <button id="allTasks" class="btn btn-secondary">All Tasks</button>
-              <button id="activeTasks" class="btn btn-secondary">Active Tasks</button>
-              <button id="completeTasks" class="btn btn-secondary">Complete Tasks</button>
-            </div>
-          </div>
-          <div id="tasks" class="row mt-4"></div>
+<%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center mt-4">To Do List</h1>
+      <div class="form-group">
+        <input type="text" id="taskDescription" class="form-control" placeholder="Enter a new task...">
+        <button id="addTask" class="btn btn-primary mt-3">Add Task</button>
+      </div>
+      <div class="mt-4">
+        <div class="btn-group">
+          <button id="allTasks" class="btn btn-secondary">All Tasks</button>
+          <button id="activeTasks" class="btn btn-secondary">Active Tasks</button>
+          <button id="completeTasks" class="btn btn-secondary">Complete Tasks</button>
         </div>
       </div>
+      <div id="tasks" class="row mt-4"></div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
