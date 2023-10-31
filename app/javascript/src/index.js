@@ -28,36 +28,17 @@ function renderTasks(tasks) {
 }
 
 $(document).ready(function () {
-  // Function to create a new user account and obtain the api_key
-  function createUserAccount(successCB, errorCB) {
-    var request = {
-      type: "POST",
-      url: "/users",
-      success: successCB,
-      error: errorCB,
-    };
-    $.ajax(request);
-  }
+  console.log("Document is ready!");
 
-  // Call createUserAccount to create a user account and get the api_key
-  createUserAccount(function (response) {
-    var apiKey = response.id; // Extract the api_key
-    console.log("API Key:", apiKey);
-    // Now you have the api_key and can use it for other tasks endpoints
-
-    // Fetch and render tasks based on the obtained api_key
-    indexTasks(apiKey, function (response) {
-      renderTasks(response.tasks);
-    });
-  }, function (error) {
-    console.error("Error creating a user account:", error);
+  indexTasks(function(response) {
+    renderTasks(response.tasks);
   });
 
   $("#addTask").on("click", function () {
     var taskDescription = $("#taskDescription").val();
     if (taskDescription) {
       // Use the obtained apiKey for creating a task
-      postTask(apiKey, taskDescription, function (response) {
+      postTask(taskDescription, function (response) {
         renderTasks(response.tasks);
         $("#taskDescription").val("");
       });
